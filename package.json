@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/javierlopezdeancos/es6raitnau/issues"
   },
-  "homepage": "https://github.com/javierlopezdeancos/es6raitnau#readme"
+  "homepage": "https://github.com/javierlopezdeancos/es6raitnau#readme",
+  "devDependencies": {
+    "eslint": "^3.2.2",
+    "mocha": "^3.0.2",
+    "rollup": "^0.34.7"
+  }
 }
