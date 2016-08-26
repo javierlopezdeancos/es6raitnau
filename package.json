@@ -1,0 +1,26 @@
+{
+  "name": "es6raitnau",
+  "version": "0.1.0",
+  "description": "ES6 Starter-kit project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierlopezdeancos/es6raitnau.git"
+  },
+  "keywords": [
+    "ES6",
+    "starterkit"
+  ],
+  "author": "@javierlopezdeancos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javierlopezdeancos/es6raitnau/issues"
+  },
+  "homepage": "https://github.com/javierlopezdeancos/es6raitnau#readme"
+}
