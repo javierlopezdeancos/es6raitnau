@@ -2,39 +2,28 @@
   "extends": "eslint:recommended",
 
   "parserOptions": {
-    "ecmaVersion": 5,
-    "ecmaFeatures": {
-      "globalReturn": true
-    }
+    "ecmaVersion": 6,
+    "ecmaFeatures": {},
+    "sourceType": "module"
   },
 
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
 
   "globals": {
-    "$": true,
     "Promise": true,
-    "Pusher": true,
     "afterEach": true,
-    "angular": true,
     "beforeEach": true,
-    "deferredBootstrapper": true,
-    "describe": true,
+    "suite": true,
+    "test": true,
     "expect": true,
-    "fdescribe": true,
+    "ftest": true,
     "fix": true,
-    "inject": true,
-    "it": true,
-    "jasmine": true,
-    "localforage": true,
-    "moment": true,
-    "spyOn": true,
     "xdescribe": true,
-    "xit": true,
-    "google": true,
-    "SnapABug": true
+    "xtest": true
   },
 
   "rules": {
@@ -126,7 +115,7 @@
     "object-curly-spacing": ["error", "never"],
     "operator-linebreak": ["error", "after"],
     "quotes": ["error", "single", {"avoidEscape": true}],
-    "semi": ["error", "always"],
+    "semi": ["error", "never"],
     "space-before-blocks": "error",
     "space-before-function-paren": ["error", {"anonymous": "always", "named": "never"}],
     "space-in-parens": ["error", "always"],
