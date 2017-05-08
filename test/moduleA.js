@@ -1,16 +1,14 @@
-const assert = require( 'assert' )
-const es6raitnau = require( '../src/moduleA.js' )
-let moduleB = require( '../src/moduleB.js' )
+import {expect} from 'chai'
 
+import moduleA from '../src/moduleA.js'
+
+let moduleB = require( '../src/moduleB.js' )
 const mock_moduleB = () => 3.1415
+const PI = 3.1416
 moduleB = mock_moduleB
 
-suite( 'test for example module A', () => {
-
-    suite( 'run sould console PI', () => {
-        test( ' an example ', () => {
-            assert.equal( es6raitnau(), 3.1416 )
-        } )
+describe( '#ModuleA', () => {
+    it( 'run sould console PI', () => {
+        expect( moduleA() ).to.equal( PI )
     } )
-
 } )
