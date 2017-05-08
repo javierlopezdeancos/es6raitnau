@@ -1,5 +1,17 @@
-import buble from 'rollup-plugin-buble'
+import babel from 'rollup-plugin-babel'
+import babelrc from 'babelrc-rollup'
 import uglify from 'rollup-plugin-uglify'
+
+const babelConfig = {
+    'presets': [
+        ['env', {
+            'targets': {
+                'browsers': ['last 2 versions']
+            },
+            'loose': true
+        }]
+    ]
+}
 
 let config = {
     entry: './src/moduleA.js',
@@ -10,7 +22,11 @@ let config = {
     banner: '/* es6raitnau example */',
     footer: '/* follow me on Twitter! @javierland */',
     plugins: [
-        buble()
+        babel( babelrc( {
+            addExternalHelpersPlugin: false,
+            config: babelConfig,
+            exclude: 'node_modules/**'
+        } ) )
     ]
 }
 
