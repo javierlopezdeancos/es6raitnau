@@ -2,22 +2,25 @@
   "name": "es6raitnau",
   "version": "0.1.0",
   "description": "ES6 Starter-kit project",
-  "main": "src/moduleA.js",
+  "main": "dist/es6raitnau.min.js",
+  "module": "dist/es6raitnau.min.js",
   "scripts": {
-    "prebuild": "npm run lint",
-    "lint": "eslint *.js src/**/*.js --fix --ignore-path .eslintignore",
+    "lint": "eslint .",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "pretest": "npm run build",
-    "test": "mocha test/moduleA.js -R list --compilers js:buble/register --harmony_modules",
-    "prepublish": "npm test"
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "npm run test -- -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/javierlopezdeancos/es6raitnau.git"
   },
   "keywords": [
-    "ES6",
+    "es6",
+    "modules",
+    "rollup",
+    "bundle",
     "starterkit"
   ],
   "author": "@javierlopezdeancos",
@@ -27,11 +30,21 @@
   },
   "homepage": "https://github.com/javierlopezdeancos/es6raitnau#readme",
   "devDependencies": {
-    "buble": "^0.13.1",
-    "eslint": "^3.2.2",
-    "mocha": "^3.0.2",
-    "rollup": "^0.34.7",
-    "rollup-plugin-buble": "^0.13.0",
-    "rollup-plugin-uglify": "^1.0.1"
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "babelrc-rollup": "^3.0.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-chai-friendly": "^0.3.6",
+    "eslint-plugin-import": "^2.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "rollup": "^0.37.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-watch": "^2.5.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0"
   }
 }
